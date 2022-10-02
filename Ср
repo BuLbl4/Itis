@@ -1,0 +1,31 @@
+double x, y;
+Console.WriteLine("Введите x и y");
+x = double.Parse(Console.ReadLine());
+y = double.Parse(Console.ReadLine());
+if ((x <= 0) && (x >= -1) && (y <= 1) && (y >= -1))
+{
+  if (y <= -Math.Abs(x) + 1)
+  {
+    if (y >= x * x - 1)
+    {
+      Console.WriteLine("+");
+    }
+    else
+    {
+      Console.WriteLine("-");
+    }
+  } 
+  else
+  {
+    Console.WriteLine("+");
+  }
+}
+
+else if ((x > 0) && (x <= 1) && (y <= 1) && (y >= 0))
+{
+  Console.WriteLine("Da");
+}
+else
+{
+  Console.WriteLine("Net");
+}
