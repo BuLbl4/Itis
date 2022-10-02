@@ -1,0 +1,18 @@
+int a, b, c;
+Console.WriteLine("введите число");
+a = int.Parse(Console.ReadLine());
+b = 0;
+c = 1;
+
+while(c <= a)
+{
+    c = c * 2;
+    if (c == a)
+    {
+        Console.WriteLine("+");
+    }
+}
+if (a == 1)
+    {
+    Console.WriteLine("+");
+    }
