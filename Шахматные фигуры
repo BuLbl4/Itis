@@ -3,7 +3,6 @@ int numberA, numberB;
 char chA, chB;
 chA = char.Parse(Console.ReadLine());
 numberA = int.Parse(Console.ReadLine());
-
 chB = char.Parse(Console.ReadLine());
 numberB = int.Parse(Console.ReadLine());
 if (numberA != 2)
@@ -29,5 +28,95 @@ else
     }
 }
 
+Слон 
+int numberA, numberB;
+char chA, chB;
+chA = char.Parse(Console.ReadLine());
+numberA = int.Parse(Console.ReadLine());
+chB = char.Parse(Console.ReadLine());
+numberB = int.Parse(Console.ReadLine());
+if(Math.Abs(numberA - numberB) == Math.Abs(chA - chB))
+{
+    Console.WriteLine("+");
+}
+else
+{
+    Console.WriteLine("-");
+}
 
+Ладья
+int numberA, numberB;
+char chA, chB;
+chA = char.Parse(Console.ReadLine());
+numberA = int.Parse(Console.ReadLine());
+chB = char.Parse(Console.ReadLine());
+numberB = int.Parse(Console.ReadLine());
 
+if (numberA > 0 && numberA <= 8 && numberB > 0 && numberB <= 8 && ((numberA == numberB) || (chA == chB)))
+{
+    Console.WriteLine("+");
+}
+else
+{
+    Console.WriteLine("-");
+}
+
+Ферзь
+int numberA, numberB;
+char chA, chB;
+chA = char.Parse(Console.ReadLine());
+numberA = int.Parse(Console.ReadLine());
+chB = char.Parse(Console.ReadLine());
+numberB = int.Parse(Console.ReadLine());
+
+if(Math.Abs(numberA - numberB) == Math.Abs(chA - chB))
+{
+    Console.WriteLine("+");
+}
+else
+{
+    if((chA == chB) || (numberA == numberB))
+    {
+        if(numberA > 0 && numberA <= 10 && numberB > 0 && numberB <= 10)
+        {
+            Console.WriteLine("+");
+        }
+        else
+        {
+            Console.WriteLine("-");
+        }
+    }
+    else
+    {
+        Console.WriteLine("-");
+    }
+}
+Конь 
+ int numberA, numberB;
+char chA, chB;
+chA = char.Parse(Console.ReadLine());
+numberA = int.Parse(Console.ReadLine());
+chB = char.Parse(Console.ReadLine());
+numberB = int.Parse(Console.ReadLine());
+if(Math.Abs(numberA - numberB) == 2)
+{
+    if(Math.Abs(chA - chB) == 1)
+    {
+        Console.WriteLine("+");
+    }
+    else
+    {
+        Console.WriteLine("-");
+    }
+}
+if(Math.Abs(chA - chB) == 2)
+{
+    if(Math.Abs(numberA - numberB) == 1)
+    {
+        Console.WriteLine("+");
+    }
+    else
+    {
+        Console.WriteLine("-");
+    }
+}
