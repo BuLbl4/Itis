@@ -1,0 +1,33 @@
+Пешка
+int numberA, numberB;
+char chA, chB;
+chA = char.Parse(Console.ReadLine());
+numberA = int.Parse(Console.ReadLine());
+
+chB = char.Parse(Console.ReadLine());
+numberB = int.Parse(Console.ReadLine());
+if (numberA != 2)
+{
+    if ((chA == chB) && (numberA - numberB == 1))
+    {
+        Console.WriteLine("+");
+    }
+    else
+    {
+        Console.WriteLine("-");
+    }
+}
+else
+{
+    if ((chA == chB) && (numberB - numberA == 1) || (numberB - numberA == 2))
+    {
+        Console.WriteLine("+");
+    }
+    else
+    {
+        Console.WriteLine("-");
+    }
+}
+
+
+
