@@ -1,11 +1,16 @@
-double pi, x, k, sum;
+double pi, x, k, sum, e;
 pi = 0;
 sum = 0;
 x = double.Parse(Console.ReadLine());
 k = double.Parse(Console.ReadLine());
+e = Math.E;
 for (int i = 0; i < k; i++)
 {
     sum = ((1 / ((4 * k - 2) * (4 * k - 1))) + sum);
 }
 pi = 8 * sum + 2 * (Math.Log2(x));
-Console.WriteLine(pi);
+Console.WriteLine(pi); 
+if (pi >= e)
+{
+    Console.WriteLine("+");
+}
