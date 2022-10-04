@@ -1,0 +1,157 @@
+//1 задача
+//int n = 10;
+//int[] arr = new int[n];
+//int max = 100;
+//int min = -110;
+//Random r = new Random();
+//for (int i = 0; i < n; i++)
+//{
+//    arr[i] = r.Next(-100, 100);
+//    Console.WriteLine(arr[i]);
+//}
+//for (int i = 0; i < n; i++)
+//{
+//    if (arr[i] > 0)
+//    {
+//        max = Math.Min(arr[i], max);
+//    }
+//    if (arr[i] < 0)
+//    {
+//        min = Math.Max(min, arr[i]);
+
+//    }
+//}
+//Console.WriteLine("___");
+//Console.WriteLine(max);
+//Console.WriteLine(min);
+
+
+
+//2 задача
+//int p = 0;
+//int max = 0;
+//int n = 10;
+//int[] arr = new int[n];
+//Random r = new Random();
+//for (int i = 0; i < n; i++)
+//{
+//    arr[i] = r.Next(-100, 100);
+//    Console.WriteLine(arr[i]);
+//}
+//for (int i = 0; i < n; i++)
+//{
+//    if (arr[i] > max)
+//    {
+//        max = arr[i];
+//        p = i;
+//    }
+//}
+
+//Console.WriteLine("_______");
+//Console.WriteLine(p);
+//Console.WriteLine(max);
+
+//3 задача
+//int[] arr = {  -100 ,1, -100 , 13 , 103 , -71 , 134 , -100 , 5 };
+//int c, m, krayniy, p;
+//c = 0;
+//p = 0;
+//krayniy = 0;
+//m = 0; 
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    if (arr[i] < m)
+//    {
+//        m = arr[i];
+//        krayniy = i;
+//    }
+//    if (arr[i] == m)
+//    {
+//        c++;
+//        p = krayniy;
+//        krayniy = i;
+//    }
+
+//}
+//Console.WriteLine(c);
+//Console.WriteLine(p);   
+
+
+
+//4 задача
+//static bool ProstieDel(int x)
+//{
+
+//    bool prost = true;
+//    for (int i = 2; i < x; i++)
+//        if (x % i == 0)
+//            return  false;
+//        return true;
+
+//}
+//Random r = new Random();
+//int c = 0;
+//int n = 10;
+//int[] arr = new int[n];
+
+//for (int i = 0; i < n; i++)
+//    arr[i] = r.Next(0, 100);
+//for(int i = 0; i < n; i++)
+//    Console.WriteLine($"a[{i}] = {arr[i]}");
+
+//for (int i = 0; i < n; i++)
+//{
+//    if (ProstieDel(Math.Abs(arr[i])) == true)
+//    {
+//        Console.WriteLine(arr[i]);
+//        c++;
+//    }
+//}
+//Console.WriteLine("-----");
+//Console.WriteLine($"простых делителе - {c}");
+
+
+//5 задача
+
+
+
+
+//int[] arr = { -100, -100, 1, 13, 103, -71, 134, 1, 5, 5 };
+//int c = 0;
+//int m = 0;
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    for (int j = i + 1; j < arr.Length; j++)
+//    {
+//        if (arr[i] == arr[j])
+//        {
+//            c = arr[i];
+//            Console.WriteLine($"дубликат - {c}");
+//        }
+//    }
+//}
+
+
+//6 задача
+
+
+//int[] arr = { -100, -100, 1, 13, 103, -100,-71, 134, 5, 5 };
+//int m = 0;
+//int c = 0;
+//for (int i = 0; i < arr.Length; i++)
+//{
+//    for (int j = i + 1; j < arr.Length; j++)
+//    {
+//        if (arr[i] == arr[j])
+//        {
+//            m = arr[i];
+//            break;
+//        }
+//        if ((arr[i] != arr[j]) &&  (arr[i] != m))
+//        {
+//            c = arr[i];
+//            Console.WriteLine($"Уникальные элементы - {c}");
+//            break;
+//        }
+//    }
+//}
