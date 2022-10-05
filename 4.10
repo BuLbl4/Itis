@@ -135,23 +135,22 @@
 //6 задача
 
 
-//int[] arr = { -100, -100, 1, 13, 103, -100,-71, 134, 5, 5 };
-//int m = 0;
-//int c = 0;
-//for (int i = 0; i < arr.Length; i++)
-//{
-//    for (int j = i + 1; j < arr.Length; j++)
-//    {
-//        if (arr[i] == arr[j])
-//        {
-//            m = arr[i];
-//            break;
-//        }
-//        if ((arr[i] != arr[j]) &&  (arr[i] != m))
-//        {
-//            c = arr[i];
-//            Console.WriteLine($"Уникальные элементы - {c}");
-//            break;
-//        }
-//    }
-//}
+int[] arr = { -100, -100, 1, 13, 103, -100, -71,-100,-71, 134, 5, 5 };
+int m = 0;
+int c = 0;
+for (int i = 0; i < arr.Length; i++)
+{
+    for (int j = i + 1; j < arr.Length; j++)
+    {
+
+        if (arr[i] == arr[j])
+        {
+            m++;
+        }
+        if (m == 1)
+        {
+            c++;    
+        }
+    }
+}
+Console.WriteLine($"В массиве есть {c} уникальных элемента");
