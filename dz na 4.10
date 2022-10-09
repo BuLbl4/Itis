@@ -1,16 +1,19 @@
-double pi, x, k, sum, e;
-pi = 0;
-sum = 0;
-x = double.Parse(Console.ReadLine());
-k = double.Parse(Console.ReadLine());
-e = Math.E;
-for (int i = 0; i < k; i++)
+
+int k;
+k = int.Parse(Console.ReadLine());
+int maxK;
+double c, eps;
+eps = double.Parse(Console.ReadLine());
+c = 0; 
+maxK = k;
+k = 0;
+while(k!=maxK)
 {
-    sum = ((1 / ((4 * k - 2) * (4 * k - 1))) + sum);
-}
-pi = 8 * sum + 2 * (Math.Log2(x));
-Console.WriteLine(pi); 
-if (pi >= e)
-{
-    Console.WriteLine("+");
+    c = (8 * (1 / (4 * k - 2) * (4 * k - 1)) + (2 * (Math.Log10(2)))) + c;
+    Console.WriteLine(c);
+    k++;
+    if (c > eps)
+    {
+        break;  
+    }
 }
