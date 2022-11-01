@@ -1,0 +1,106 @@
+//генерация матрицы
+
+int[,] GenerateMatr(int n, int m)
+{
+    Random r = new Random();
+    int[,] matr = new int[n, m];
+    for (int i = 0; i < n; i++)
+        for (int j = 0; j < m; j++)
+            matr[i, j] = r.Next(10);
+
+    return matr;
+}
+
+//запись матрицы в файл
+
+void SaveMatr(int[,] matr, string file)
+{
+    int n = matr.GetLength(0);
+    int m = matr.GetLength(1);
+    using (StreamWriter save = new StreamWriter(file))
+    {
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+                save.Write("{0} ", matr[i, j]);
+            save.WriteLine();
+        }
+    }
+}
+
+//чтение матрицы из файла
+
+int[,] MatrReader(string file, int n)
+{
+    using StreamReader reader = new StreamReader(file);
+    int[,] matr = new int[n, n];
+    for (int i = 0; i < n; i++)
+    {
+        string[] s = reader.ReadLine().Split(" ");
+        for (int j = 0; j < n; j++)
+        {
+            matr[i, j] = int.Parse(s[j]);
+        }
+
+    }
+    return matr;
+}
+
+//вывод матрицы на экран
+
+void PrintMatr(int[,] matr)
+{
+    int n = matr.GetLength(0);
+    int m = matr.GetLength(1);
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+            Console.Write($"{matr[i, j],4}");
+        Console.WriteLine();
+        Console.WriteLine();
+    }
+}
+
+int N = 5, M = 5;
+int[,] matr = GenerateMatr(N, M);
+PrintMatr(matr);
+SaveMatr(matr, "output.txt");
+
+
+// 1 задание 
+// Сгенерировать одну матрицу из нечетных чисел
+
+
+
+public static int GenerateMatr1()
+{
+    Random random = new Random();
+    while (true)
+    {
+        int a = random.Next(-100, 101);
+        if (a % 2 != 0)
+        {
+            return a;
+        }
+    }
+}
+
+public static int[,] Matr1InFile(int n, int m)
+{
+    int[,] matr = new int[n,m];
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < m; j++)
+        {
+            matr[i, j] = GenerateMatr1();
+        }
+    }
+
+    return matr;
+}
+
+
+int n = 5, m = 5;
+int[,] matr = GenerateMatr1(n, m);
+PrintMatr(matr);
+SaveMatr(matr, "output.txt");
